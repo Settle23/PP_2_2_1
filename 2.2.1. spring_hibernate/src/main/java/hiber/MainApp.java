@@ -28,8 +28,8 @@ public class MainApp {
 
         user1.setCar(car1);
         user2.setCar(car2);
-        user2.setCar(car3);
-        user2.setCar(car4);
+        user3.setCar(car3);
+        user4.setCar(car4);
 
         userService.add(user1);
         userService.add(user2);
@@ -44,8 +44,8 @@ public class MainApp {
             System.out.println("Email = " + user.getEmail());
             System.out.println(user.getCar());
             System.out.println();
-
-            context.close();
         }
+        User userByCar = userService.getUserByCar("Porsche", 911);
+        System.out.println(userByCar);
     }
 }
