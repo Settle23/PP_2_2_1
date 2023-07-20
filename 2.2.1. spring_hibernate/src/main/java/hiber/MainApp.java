@@ -27,10 +27,10 @@ public class MainApp {
         User user4 = new User("Jane", "Air", "user4@mail.ru");
 
 
-        userService.add(user1, car1);
-        userService.add(user2, car2);
-        userService.add(user3, car3);
-        userService.add(user4, car3);
+        userService.add(user1);
+        userService.add(user2);
+        userService.add(user3);
+        userService.add(user4);
 
         List<User> users = userService.listUsers();
         for (User user : users) {
@@ -38,8 +38,7 @@ public class MainApp {
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
             System.out.println("Email = " + user.getEmail());
-            System.out.println("Model = " + user.getCar().getModel());
-            System.out.println("Series = " + user.getCar().getSeries());
+            System.out.println(user.getCar());
             System.out.println();
 
             context.close();
